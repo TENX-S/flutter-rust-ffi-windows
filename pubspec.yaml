@@ -1,0 +1,32 @@
+name: flutter_rust_ffi_windows
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  ffi: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  ffigen: ^2.4.2
+
+flutter:
+
+  uses-material-design: true
+
+ffigen:
+  output: lib/bindings.dart
+  headers:
+    entry-points:
+      - rust/target/bindings.h
+  name: GreeterBindings
+  description: Dart bindings to call rust functions
