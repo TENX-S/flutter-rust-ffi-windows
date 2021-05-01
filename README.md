@@ -4,8 +4,8 @@ This project focuses on cross-compiling Rust to Android on **Windows**, if you a
 
 ## Prerequisites
 * Windows 10 (Not tested on 8, 7, ...)
-* Install [Visual Studio](https://visualstudio.microsoft.com/) with C++ development support.
-* Install [LLVM](https://releases.llvm.org/download.html) 9 or higher.
+* [Visual Studio](https://visualstudio.microsoft.com/) with C++ development support installed.
+* [LLVM](https://releases.llvm.org/download.html) 9 or higher installed.
 * Android SDK and NDK installed.
 * Flutter >= 2.0.5
 * Rust >= 1.45.0
