@@ -114,5 +114,6 @@ pub extern fn rust_cstr_free(s: *mut c_char) {
 
 ### Final step
 Use the generated `GreetingBindings` class. An example wrapper is available [here](lib/greeter.dart).
+If you modify your Rust code, just execute `build_android.ps1` again. 
 
 ![](screenshot/ffi.png)
