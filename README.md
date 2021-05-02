@@ -57,6 +57,11 @@ ffigen:
   description: Dart bindings to call rust functions
 ```
 
+Then, we need to run:
+```shell
+$ flutter pub get
+```
+
 Create a rust project **under** this flutter project:
 ```shell
 $ cargo new --lib --name greeter rust
@@ -110,10 +115,11 @@ pub extern fn rust_cstr_free(s: *mut c_char) {
   * `rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android`
   * `cargo install cbindgen`
 * On the `rust` folder:
-  * Execute the `build_android.ps1` **under the rust folder** to finish the remaining work
+  * Execute the `build_android.ps1` **under the rust folder** to finish the remaining work.
 
 ### Final step
 Use the generated `GreetingBindings` class. An example wrapper is available [here](lib/greeter.dart).
-If you modify your Rust code, just execute `build_android.ps1` again. 
+
+**Every time you modify the Rust code, you need to execute the `build_android.ps1` again.**
 
 ![](screenshot/ffi.png)
