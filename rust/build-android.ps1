@@ -6,7 +6,7 @@ function Write-Done {
 }
 
 function Write-Error {
-    Write-Host 'Fatal Error:' -ForegroundColor Red
+    Write-Host 'Fatal error:' -ForegroundColor Red
     Write-Host $_
     exit 1
 }
@@ -59,7 +59,8 @@ function Build {
     )
 
     try {
-        Write-Host "Building"; Write-Host "    $targetName" -ForegroundColor Yellow
+        Write-Host "Building";
+        Write-Host "    $targetName" -ForegroundColor Yellow
         cargo build --target $targetName --release
         $libPath = Get-ChildItem -Path "./target/$targetName/release" lib*.so | Sort-Object LastWriteTime | Select-Object -First 1
         $libName = Split-Path $libPath -leaf
