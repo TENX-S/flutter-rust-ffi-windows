@@ -27,7 +27,7 @@ function Add-Target {
     $file = ''
     if (Test-Path './.cargo/config') {
         $file = './.cargo/config'
-    } elseif ('./.cargo/config.toml') {
+    } elseif (Test-Path './.cargo/config.toml') {
         $file = './.cargo/config.toml'
     }
 
