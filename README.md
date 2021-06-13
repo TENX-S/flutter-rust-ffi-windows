@@ -7,7 +7,7 @@ This project focuses on cross-compiling Rust to Android on **Windows**, if you a
 * [Visual Studio](https://visualstudio.microsoft.com/) with C++ development support installed.
 * [LLVM](https://releases.llvm.org/download.html) 9 or higher installed.
 * Android SDK and NDK installed.
-* Flutter >= 2.0.5
+* Flutter >= 2.2.2
 * Rust >= 1.45.0
 
 ## Getting started
@@ -18,7 +18,6 @@ Create a blank flutter project by:
 ```shell
 $ flutter create greeter
 $ cd greeter
-$ dart migrate --apply-changes
 ```
 
 Replace the newly generated `pubspec.yaml` as follows:
@@ -120,6 +119,6 @@ pub extern fn rust_cstr_free(s: *mut c_char) {
 ### Final step
 Use the generated `GreetingBindings` class. An example wrapper is available [here](lib/greeter.dart).
 
-**Every time you modify the Rust code, you need to execute the `build_android.ps1` again.**
+**Each time you modify the Rust code, you need to execute the `build_android.ps1` again.**
 
 ![](screenshot/ffi.png)
